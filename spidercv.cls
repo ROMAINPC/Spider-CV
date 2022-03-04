@@ -157,7 +157,7 @@
 }
 
 
-\usetikzlibrary{shapes,snakes}
+\usetikzlibrary{shapes,decorations}
 
 %%%%%%% Picture
 \newcommand{\DefineProfile}[3]% Background color, Highlight color, Img path
