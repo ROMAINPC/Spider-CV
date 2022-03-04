@@ -1,0 +1,203 @@
+\documentclass[11pt]{spidercv}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+
+
+\begin{document}
+
+    %----------------------------------------------------------------------------------------
+    %	TOP BAR
+    %----------------------------------------------------------------------------------------
+    \begin{TopBar}{\ColorTextSide}
+        \Name{\ColorHighlight}{Thierry Golo}{Employee}{22 years old}
+
+        %%% Contact
+        \TextSeparator{\ColorHighlight}{Contact}
+        \begin{DoubleColumns}
+            \begin{ItemList}{\ColorHighlight}
+                \item [\Large\faAt] \href{mailto:email@example.com}{email@example.com}
+                \item [\Large\faMobile] 01 23 45 67 89
+                \item [\Large\faMapMarker] World
+            \end{ItemList}
+            \nextcolumn
+            \begin{ItemList}{\ColorHighlight}
+                \item [\Large\faGithub] \href{https://github.com/romainpc}{romainpc}
+                \item [\Large\faLinkedinSquare] \href{https://www.linkedin.com/}{romainpc}
+            \end{ItemList}
+        \end{DoubleColumns}
+
+        %%% Interests
+        \TextSeparator{\ColorHighlight}{Interests}
+        \begin{TripleColumns}
+            \begin{ItemList}{\ColorHighlight}
+                \item [] Eating
+            \end{ItemList}
+            \nextcolumn
+            \begin{ItemList}{\ColorHighlight}
+                \item [] Drinking
+            \end{ItemList}
+            \nextcolumn
+            \begin{ItemList}{\ColorHighlight}
+                \item [] Sleeping
+            \end{ItemList}
+        \end{TripleColumns}
+    \end{TopBar}
+
+
+
+    %----------------------------------------------------------------------------------------
+    %	SIDE BAR
+    %----------------------------------------------------------------------------------------
+    \begin{SideBar}{\ColorBackground}{\ColorTextSide}
+        
+        %%% Soft skills
+        \TextSeparatorBis{\ColorHighlight}{\faUser}{Soft skills}
+        
+        \Label{\ColorHighlight}{Skill 1}
+        \Label{\ColorHighlight}{Skill 2}
+        \Label{\ColorHighlight}{Skill 3}
+        \Label{\ColorHighlight}{Skill 4}
+        \Label{\ColorHighlight}{Skill 5}
+        
+        \vspace*{1cm}
+
+        %%% Hard skills
+        \TextSeparatorBis{\ColorHighlight}{\faGears}{Hard skills}
+        \begin{ItemList}{\ColorHighlight}
+            \item [\faCode] skill, skill, skill, skill
+            \item [\faFileCodeO]  skill, skill, skill, skill
+            \item [\faCubes]  skill, skill, skill, skill
+            \item [\faPencilSquareO]  skill, skill, skill, skill
+            \item [\faVideoCamera]  skill, skill, skill, skill
+            \item [\faGear]  skill, skill, skill, skill
+        \end{ItemList}
+
+        \vspace*{1cm}
+
+        %%% Spider
+        \TextSeparatorBis{\ColorHighlight}{\faTerminal}{Spider}
+
+        \begin{SpiderDiagram}{\ColorTextSide}{\ColorHighlight}
+            \addSkill{A}{5}
+            \addSkill{B}{3}
+            \addSkill{C}{2}
+            \addSkill{D}{4}
+            \addSkill{E}{5}
+            \addSkill{F}{3}
+        \end{SpiderDiagram}
+
+        \vspace*{1cm}
+
+        %%% Languages
+        \TextSeparatorBis{\ColorHighlight}{\faLanguage}{Languages}
+
+        \begin{SkillGauges}{\ColorHighlight}
+            \addGauge{English}{5}
+            \addGauge{French}{4}
+            \addGauge{Spanish}{1}
+        \end{SkillGauges}
+    \end{SideBar}
+
+    
+
+    %----------------------------------------------------------------------------------------
+    %	Picture
+    %----------------------------------------------------------------------------------------
+    \DefineProfile{\ColorOther}{\ColorTextSide}{img/spider.png}
+
+
+
+
+    %----------------------------------------------------------------------------------------
+    %	Main
+    %----------------------------------------------------------------------------------------
+    \begin{MainPart}
+
+    %%% Experiences 
+    \MainTitleBis{\ColorHighlight}{\ColorTextMain}{Experiences}{\faSuitcase}
+    \Experience
+        {\ColorHighlight}
+		{Useful Director}
+		{Nice Company}
+        {2015-\faUndo}
+        {   
+            Write here your description.\\
+            \lorem\\
+            \lorem
+        }
+    \Experience
+        {\ColorHighlight}
+		{Teacher}
+		{Nice School}
+        {2004-2015}
+        {   
+            Write here your description.\\
+            \lorem
+        }
+    \Experience
+        {\ColorHighlight}
+		{Happiness manager}
+		{Nowhere}
+        {1968}
+        {   
+            Write here your description.\\
+            \lorem\\
+            \lorem
+        }
+
+
+    
+    %%% Education
+    \MainTitleBis{\ColorHighlight}{\ColorTextMain}{Education}{\faGraduationCap}
+    \Experience
+        {\ColorHighlight}
+		{OMG degree}
+		{Nice university}
+        {1903}
+        {   
+            Write here your description.\\
+            \lorem
+        }
+    \Experience
+        {\ColorHighlight}
+		{LOL degree}
+		{Nice university}
+        {1902}
+        {   
+            Write here your description.\\
+            \lorem
+        }
+    \Experience
+        {\ColorHighlight}
+		{WTF degree}
+		{Nice university}
+        {1901}
+        {   
+            Write here your description.\\
+            \lorem\\
+            \lorem
+        }
+
+
+    %%% Activities
+    \MainTitleBis{\ColorHighlight}{\ColorTextMain}{Activities}{\faUsers}
+    \vspace*{0.5cm}
+    \begin{DoubleColumns}
+        \begin{ItemList}{\ColorHighlight}
+            \item [] Doing LaTex templates
+            \item [] Playing video games
+        \end{ItemList}
+        \nextcolumn
+        \begin{ItemList}{\ColorHighlight}
+            \item [] Other fun stuff
+        \end{ItemList}
+    \end{DoubleColumns}
+
+    \end{MainPart}
+
+    
+
+\end{document}
+
+
