@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Spider CV
 % LaTeX Class
-% Version 1.0 (03/01/22)
+% Version 1.1 (08/10/22)
 %
 % Name like this because of the spider chart widget.
 % 
@@ -63,6 +63,15 @@
 
 
 %----------------------------------------------------------------------------------------
+%	Printable mode
+%----------------------------------------------------------------------------------------
+\newcommand{\PrintableMode}{
+    \def\PM{} % PM command used in if statements
+    \def\ColorTextSide{\ColorTextMain} % Use same text color everywhere
+}
+
+
+%----------------------------------------------------------------------------------------
 %	FONTS
 %----------------------------------------------------------------------------------------
 
@@ -109,8 +118,14 @@
 \usepackage[absolute,overlay]{textpos} % option needed to use absolute positionning and to have text on front
 
 \newenvironment{SideBar}[2]{% Background color, Text color
-    \begin{tikzpicture}[remember picture,overlay]% put text anywhere    
-        \fill[fill=#1, shift={(current page.north west)}] % side and top background
+    \begin{tikzpicture}[remember picture,overlay]% put text anywhere
+
+        \ifx\PM\undefined % side and top background
+        \fill[fill=#1, shift={(current page.north west)}] 
+        \else
+        \draw[draw=#1, shift={(current page.north west)}, very thick]
+        \fi
+            % \fill[fill=#1, shift={(current page.north west)}] 
             (0,-\paperheight) --
             (0,-\anglesize) --
             (\anglesize,0) --
@@ -172,13 +187,14 @@
         \draw [draw=#2, very thick]
         (s1) -- (s2);
         %%%%%%%%%%%%%%%
+        \def\backcolor{\ifx\PM\undefined#1\else White\fi}
         \node[
             shift={(current page.north west)},
             xshift=(\sidewidth+2\margin)/2,
             yshift=-(\sidewidth+2\margin)/2,
             chamfered rectangle, draw=#2, very thick,
           minimum size=\profilesize,
-          fill=#1,
+          fill=\backcolor,
           path picture={
             \node at (path picture bounding box.center){
             \includegraphics[height=\profilesize]{#3}
@@ -278,11 +294,12 @@
 
 %%%%%% Section title
 \newcommand{\MainTitleBis}[4]{%Background color, Highlight color, Left text, Right text
-    \begin{tikzpicture}[baseline]    
-        \node[draw=#2,rounded corners,fill=#1,inner sep=3pt, very thick, anchor=west]
+    \begin{tikzpicture}[baseline]
+        \def\backcolor{\ifx\PM\undefined#1\else White\fi}    
+        \node[draw=#2,rounded corners,fill=\backcolor,inner sep=3pt, very thick, anchor=west]
         at (0,0) (box1)
             {\textbf{\Large\color{#2}#3}};
-        \node[draw=#2,rounded corners,fill=#1,inner sep=3pt, very thick, anchor=east]
+        \node[draw=#2,rounded corners,fill=\backcolor,inner sep=3pt, very thick, anchor=east]
         at (\textwidth,0) (square)
         {\textbf{\Large\color{#2}#4}};
         \draw [very thick, draw=#2, inner sep=0pt] (box1) -- (square);
@@ -290,10 +307,11 @@
 }
 \newcommand{\MainTitle}[3]{%Background color, Highlight color, Title text
     \begin{tikzpicture}[baseline]    
-            \node[draw=#2,rounded corners,fill=#1,inner sep=3pt, very thick, anchor=west]
+            \def\backcolor{\ifx\PM\undefined#1\else White\fi}  
+            \node[draw=#2,rounded corners,fill=\backcolor,inner sep=3pt, very thick, anchor=west]
             at (0,0) (box1)
             {\textbf{\Large\color{#2}#3}};
-            \node at (\textwidth,0) [rectangle, draw=#2,rounded corners=0.5mm,fill=#1, anchor=east, very thick] (square) {};
+            \node at (\textwidth,0) [rectangle, draw=#2,rounded corners=0.5mm,fill=\backcolor, anchor=east, very thick] (square) {};
         \draw [very thick, draw=#2, inner sep=0pt] (box1) -- (square);
     \end{tikzpicture}\\
 }

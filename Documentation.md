@@ -1,5 +1,4 @@
 # Spider CV documentation
-_Warning : because of the large colored sidebar, this resume was not designed to be printed._
 
 ## General use
 You normally don't need to modify the .cls file.
@@ -47,6 +46,13 @@ To redefine this macros add at the beginning of the document :
 \DefineColorMacros{White}{Black}{GreenIT}{Black}{GreenArmy}
 ```
 
+
+### Printable mode
+If you wish to facilitate the printing of your CV, use the following command at the beginning of the document:
+```LaTex
+\PrintableMode
+```
+This will disable plain color backgrounds and use ColorTextMain also inside side bar.
 
 ## Parts
 Three main environments are used to split the template.
