@@ -164,6 +164,7 @@ You can display your strength in severals skills on a web chart.
     % etc
 \end{SpiderDiagram}
 ```
+*⚠️ You can only add one spider chart to your resume. 🚧*
 
 
 #### Lists
