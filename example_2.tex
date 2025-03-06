@@ -5,169 +5,169 @@
 
 \begin{document}
 
-    %-------------------------------------------
-    %	COLOR MACROS
-    %-------------------------------------------
-    \definecolor{example}{HTML}{123456}
-    \DefineColorMacros{White}{black}{orange}{example}{GreenArmy!50}
+%-------------------------------------------
+%	COLOR MACROS
+%-------------------------------------------
+\definecolor{example}{HTML}{123456}
+\DefineColorMacros{White}{black}{orange}{example}{GreenArmy!50}
 
-    %----------------------------------------------------------------------------------------
-    %	TOP BAR
-    %----------------------------------------------------------------------------------------
-    \begin{TopBar}{\ColorTextSide}
-        \Name{\ColorHighlight}{Sarah Musant}{Student}{42 years old}
+%----------------------------------------------------------------------------------------
+%	TOP BAR
+%----------------------------------------------------------------------------------------
+\begin{TopBar}{\ColorTextSide}
+    \Name{\ColorHighlight}{Sarah Musant}{Student}{42 years old}
 
-        %%% Contact
-        \SimpleSeparator{\ColorHighlight}
-        
-        Ce CV n'est pas un CV sur le cyclimse.
-        \lorem\lorem
+    %%% Contact
+    \SimpleSeparator{\ColorHighlight}
 
-        \SimpleSeparator{\ColorHighlight}
-        \begin{DoubleColumns}
-            \begin{ItemList}{\ColorHighlight}
-                \item [\Large\faAt] \href{mailto:email@example.com}{email@example.com}
-                \item [\Large\faMobile] 01 23 45 67 89
-            \end{ItemList}
-            \nextcolumn
-            \begin{ItemList}{\ColorHighlight}
-                \item [\Large\faGithub] \href{https://github.com/romainpc}{romainpc}
-                \item [\Large\faLinkedinSquare] \href{https://www.linkedin.com/}{romainpc}
-            \end{ItemList}
-        \end{DoubleColumns}
+    Ce CV n'est pas un CV sur le cyclimse.
+    \lorem\lorem
 
-    \end{TopBar}
-
-
-
-    %----------------------------------------------------------------------------------------
-    %	SIDE BAR
-    %----------------------------------------------------------------------------------------
-    \begin{SideBar}{\ColorBackground}{\ColorTextSide}
-        
-        %%% Skills
-        \TextSeparatorBis{\ColorHighlight}{Skills}{}
-        
-        \Label{\ColorHighlight}{Skill 1}
-        \Label{\ColorHighlight}{Skill 2}
-        \Label{\ColorHighlight}{Skill 3}
-        \Label{\ColorHighlight}{Skill 4}
-        \Label{\ColorHighlight}{Skill 5}
-        
-        \SimpleSeparator{\ColorHighlight}
-
-
+    \SimpleSeparator{\ColorHighlight}
+    \begin{DoubleColumns}
         \begin{ItemList}{\ColorHighlight}
-            \item [\faCode] skill, skill, skill, skill
-            \item [\faFileCodeO]  skill, skill, skill, skill
-            \item [\faCubes]  skill, skill, skill, skill
-            \item [\faPencilSquareO]  skill, skill, skill, skill
-            \item [\faVideoCamera]  skill, skill, skill, skill
-            \item [\faGear]  skill, skill, skill, skill
+            \item [\Large\faAt] \href{mailto:email@example.com}{email@example.com}
+            \item [\Large\faMobile] 01 23 45 67 89
         \end{ItemList}
+        \nextcolumn
+        \begin{ItemList}{\ColorHighlight}
+            \item [\Large\faGithub] \href{https://github.com/romainpc}{romainpc}
+            \item [\Large\faLinkedinSquare] \href{https://www.linkedin.com/}{romainpc}
+        \end{ItemList}
+    \end{DoubleColumns}
 
-        \SimpleSeparator{\ColorHighlight}
-
-
-        \begin{SpiderDiagram}{\ColorTextSide}{\ColorHighlight}
-            \addSkill{Aaa}{5}
-            \addSkill{Bbb}{3}
-            \addSkill{Ccc}{2}
-            \addSkill{Ddd}{4}
-            \addSkill{Eee}{5}
-        \end{SpiderDiagram}
-
-        \vspace*{1cm}
-
-        %%% Languages
-        \TextSeparatorBis{\ColorHighlight}{Other skills}{}
-
-        \begin{SkillGauges}{\ColorHighlight}
-            \addGauge[\faStar]{English}{5}
-            \addGauge[\faStar]{French}{4}
-            \addGauge[\faStar]{Spanish}{1}
-        \end{SkillGauges}
-    \end{SideBar}
-
-    
-
-    %----------------------------------------------------------------------------------------
-    %	Picture
-    %----------------------------------------------------------------------------------------
-    \DefineProfile{\ColorOther}{\ColorTextSide}{img/spider.png}
+\end{TopBar}
 
 
 
+%----------------------------------------------------------------------------------------
+%	SIDE BAR
+%----------------------------------------------------------------------------------------
+\begin{SideBar}{\ColorBackground}{\ColorTextSide}
 
-    %----------------------------------------------------------------------------------------
-    %	Main
-    %----------------------------------------------------------------------------------------
-    \begin{MainPart}
+    %%% Skills
+    \TextSeparatorBis{\ColorHighlight}{Skills}{}
+
+    \Label{\ColorHighlight}{Skill 1}
+    \Label{\ColorHighlight}{Skill 2}
+    \Label{\ColorHighlight}{Skill 3}
+    \Label{\ColorHighlight}{Skill 4}
+    \Label{\ColorHighlight}{Skill 5}
+
+    \SimpleSeparator{\ColorHighlight}
+
+
+    \begin{ItemList}{\ColorHighlight}
+        \item [\faCode] skill, skill, skill, skill
+        \item [\faFileCodeO]  skill, skill, skill, skill
+        \item [\faCubes]  skill, skill, skill, skill
+        \item [\faPencilSquareO]  skill, skill, skill, skill
+        \item [\faVideoCamera]  skill, skill, skill, skill
+        \item [\faGear]  skill, skill, skill, skill
+    \end{ItemList}
+
+    \SimpleSeparator{\ColorHighlight}
+
+
+    \begin{SpiderDiagram}{\ColorTextSide}{\ColorHighlight}
+        \addSkill{Aaa}{5}
+        \addSkill{Bbb}{3}
+        \addSkill{Ccc}{2}
+        \addSkill{Ddd}{4}
+        \addSkill{Eee}{5}
+    \end{SpiderDiagram}
+
+    \vspace*{1cm}
+
+    %%% Languages
+    \TextSeparatorBis{\ColorHighlight}{Other skills}{}
+
+    \begin{SkillGauges}{\ColorHighlight}
+        \addGauge[\faStar]{English}{5}
+        \addGauge[\faStar]{French}{4}
+        \addGauge[\faStar]{Spanish}{1}
+    \end{SkillGauges}
+\end{SideBar}
+
+
+
+%----------------------------------------------------------------------------------------
+%	Picture
+%----------------------------------------------------------------------------------------
+\DefineProfile{\ColorOther}{\ColorTextSide}{img/spider.png}
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	Main
+%----------------------------------------------------------------------------------------
+\begin{MainPart}
 
     %%% Experiences 
     \MainTitle{\ColorHighlight}{\ColorTextMain}{Experiences}
     \Experience
-        {\ColorHighlight}
-		{Useful Director}
-		{Nice Company}
-        {2015-\faUndo}
-        {   
-            Write here your description.\\
-            \lorem\\
-            \lorem
-        }
+    {\ColorHighlight}
+    {Useful Director}
+    {Nice Company}
+    {2015-\faUndo}
+    {
+        Write here your description.\\
+        \lorem\\
+        \lorem
+    }
     \Experience
-        {\ColorHighlight}
-		{Teacher}
-		{Nice School}
-        {2004-2015}
-        {   
-            Write here your description.\\
-            \lorem
-        }
+    {\ColorHighlight}
+    {Teacher}
+    {Nice School}
+    {2004-2015}
+    {
+        Write here your description.\\
+        \lorem
+    }
     \Experience
-        {\ColorHighlight}
-		{Happiness manager}
-		{Nowhere}
-        {1968}
-        {   
-            Write here your description.\\
-            \lorem\\
-            \lorem
-        }
+    {\ColorHighlight}
+    {Happiness manager}
+    {Nowhere}
+    {1968}
+    {
+        Write here your description.\\
+        \lorem\\
+        \lorem
+    }
 
 
-    
+
     %%% Education
     \MainTitle{\ColorHighlight}{\ColorTextMain}{Education}
     \Experience
-        {\ColorHighlight}
-		{OMG degree}
-		{Nice university}
-        {1903}
-        {   
-            Write here your description.\\
-            \lorem
-        }
+    {\ColorHighlight}
+    {OMG degree}
+    {Nice university}
+    {1903}
+    {
+        Write here your description.\\
+        \lorem
+    }
     \Experience
-        {\ColorHighlight}
-		{LOL degree}
-		{Nice university}
-        {1902}
-        {   
-            Write here your description.\\
-            \lorem
-        }
+    {\ColorHighlight}
+    {LOL degree}
+    {Nice university}
+    {1902}
+    {
+        Write here your description.\\
+        \lorem
+    }
     \Experience
-        {\ColorHighlight}
-		{WTF degree}
-		{Nice university}
-        {1901}
-        {   
-            Write here your description.\\
-            \lorem\\
-            \lorem
-        }
+    {\ColorHighlight}
+    {WTF degree}
+    {Nice university}
+    {1901}
+    {
+        Write here your description.\\
+        \lorem\\
+        \lorem
+    }
 
 
     %%% Activities
@@ -184,9 +184,9 @@
         \end{ItemList}
     \end{DoubleColumns}
 
-    \end{MainPart}
+\end{MainPart}
 
-    
+
 
 \end{document}
 
