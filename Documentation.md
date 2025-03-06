@@ -27,7 +27,7 @@ Most of the commands needs colors as arguments, this class is supplied with the 
 - Black #212121 (default text color)
 - White #FFFFFF
 - GreenArmy #252e25
-- GrennIt #4caf50
+- GrennIT #4caf50
 
 To create your own colors :
 ```LaTex
@@ -41,6 +41,7 @@ The class provided the following macros to factorize colors choices :
 - `\ColorHighlight` default to GreenIT
 - `\ColorBackground` default to Black
 - `\ColorOther` default to GreenArmy
+
 To redefine this macros add at the beginning of the document :
 ```LaTex
 \DefineColorMacros{White}{Black}{GreenIT}{Black}{GreenArmy}
@@ -136,7 +137,7 @@ Feel free to adjust bottom spacing by adding line break after the following comm
 To split a text area in several columns you can use the following structures :
 ```LaTex
 \begin{DoubleColumns}
-    % first colunm
+    % first column
     \nextcolumn
     % second column
 \end{DoubleColumns}
@@ -144,7 +145,7 @@ To split a text area in several columns you can use the following structures :
 or
 ```LaTex
 \begin{TripleColumns}
-    % first colunm
+    % first column
     \nextcolumn
     % second column
     \nextcolumn
