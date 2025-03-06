@@ -85,6 +85,14 @@ Will define the main part.
 \end{MainPart}
 ```
 
+#### Secondary Page
+Optional, will define the content of the second page.
+```LaTex
+\begin{SecondaryPage}{\ColorBackground}
+    % TODO
+\end{SecondaryPage}
+```
+
 ## Components
 
 #### Picture

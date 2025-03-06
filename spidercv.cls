@@ -172,6 +172,28 @@
 }
 
 
+\newenvironment{SecondaryPage}[1]{% Background color
+    \clearpage %% Access to the second page
+    \begin{tikzpicture}[remember picture,overlay]% put text anywhere
+        \draw [draw=#1, shift={(current page.north west)}, very thick]
+        (\paperwidth-0.5\margin,-0.5\margin-0.5\anglesize) --
+        (\paperwidth-0.5\margin,-\paperheight+0.5\margin+0.5\anglesize) --
+        (\paperwidth-0.5\margin-0.5\anglesize,-\paperheight+0.5\margin) --
+        (0.5\margin+0.5\anglesize,-\paperheight+0.5\margin) --
+        (0.5\margin,-\paperheight+0.5\margin+0.5\anglesize) --
+        (0.5\margin,-0.5\margin-0.5\anglesize) --
+        (0.5\margin+0.5\anglesize,-0.5\margin) --
+        (\paperwidth-0.5\margin-0.5\anglesize,-0.5\margin) --
+        cycle;
+    \end{tikzpicture}%
+    %%%%%%%%%%%%%
+    \begin{textblock*}{\paperwidth-2\margin}(\margin,\margin)
+        \begin{center}
+            }{
+        \end{center}
+    \end{textblock*}
+}
+
 \usetikzlibrary{shapes,decorations}
 
 %%%%%%% Picture
