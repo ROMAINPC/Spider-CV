@@ -8,6 +8,7 @@ This [class](spidercv.cls) provides all the commands necessary to easily customi
 [<img src="img/ex1.jpg" width="400">](example_1.tex)
 [<img src="img/ex2.jpg" width="400">](example_2.tex)
 [<img src="img/ex3.jpg" width="400">](example_3.tex)
+[<img src="img/ex2_2.jpg" width="400">](example_2.tex)
 
 ## Documentation
 See complete documentation [here](Documentation.md).
